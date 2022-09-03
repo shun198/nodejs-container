@@ -1,7 +1,2 @@
-FROM node
+FROM node:14.17.1-alpine
 WORKDIR /code
-# package.jsonをコンテナの/code内にコピー
-COPY /app/package.json .
-RUN npm install
-# ソースコードをコンテナの/code内にコピー
-COPY . .
